@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :user3s
+  devise_for :user2s
   devise_for :users
   root 'welcome#index'
-
+  resources :members,:nutritionists,:resturants
 
 
 

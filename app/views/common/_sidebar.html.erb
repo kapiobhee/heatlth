@@ -1,0 +1,13 @@
+<div id="left-menu" data-role="panel" data-position="left" data-display="overlay" data-theme="b">
+  <% if !current_user %>
+    <ul data-role="listview">
+      <li> <%= link_to("註冊", new_user_registration_path) %> </li>
+      <li> <%= link_to("登入", new_user_session_path) %> </li>
+    </ul>
+  <% else %>
+    <ul data-role="listview">
+      <li><%= current_user.email %><b class="caret"></b></a></li>
+        <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+    </ui>
+  <% end %>
+</div>

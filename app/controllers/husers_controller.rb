@@ -1,0 +1,2 @@
+class HusersController < ApplicationController
+end

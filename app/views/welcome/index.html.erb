@@ -1,5 +1,5 @@
-<ul data-role="listview" data-inset="true">
-  <li><%= link_to '使用者', members_path %></li>
-  <li><%= link_to '營養師', nutritionists_path %></li>
-  <li><%= link_to '餐廳業者', resturants_path %></li>
-</ul>
+<div class="collection">
+  <%= link_to '使用者', members_path, :class => "collection-item" %>
+  <%= link_to '營養師', nutritionists_path, :class => "collection-item" %>
+  <%= link_to '餐廳業者', resturants_path, :class => "collection-item" %>
+</div>

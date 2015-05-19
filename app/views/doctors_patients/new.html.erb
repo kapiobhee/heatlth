@@ -1,0 +1,29 @@
+<%= form_tag new_doctors_patient_path ,method: :get do %>
+    <div class="ui-field-contain">
+      <label for="roc_id">身份證字號</label>
+      <%= text_field_tag :roc_id ,params[:roc_id]%>
+    </div>
+    <a><%= submit_tag "搜尋" ,class:"btn wave-effect waves-light" %></a>
+<% end %>
+
+<% if !@searchs.nil? %>
+<table class="responsive-table striped">
+  <thead>
+    <tr>
+      <td>名稱</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @searchs.each do |s|%>
+    <tr>
+      <%= form_tag doctors_patients_path() ,method: :post do %>
+      <td><%= s.name %>
+        <a><%= submit_tag "加入追蹤" ,class:"btn wave-effect waves-light" %></a>
+      </td>
+  <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
+

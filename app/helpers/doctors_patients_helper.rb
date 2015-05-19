@@ -1,0 +1,2 @@
+module DoctorsPatientsHelper
+end

@@ -11,11 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506115915) do
+ActiveRecord::Schema.define(version: 20150516124654) do
+
+  create_table "doctor_patients", force: :cascade do |t|
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "doctor_id",  limit: 4
+    t.integer  "user_id",    limit: 4
+    t.text     "advise",     limit: 65535
+    t.string   "user_name",  limit: 255
+  end
 
   create_table "meals", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "resturant_id", limit: 4
+    t.float    "calory",       limit: 24
+    t.float    "protein",      limit: 24
+    t.float    "vitaminA6",    limit: 24
+    t.float    "vitaminD7",    limit: 24
+    t.float    "vitaminE8",    limit: 24
+    t.float    "vitaminK",     limit: 24
+    t.float    "vitaminC",     limit: 24
+    t.float    "vitaminB1",    limit: 24
+    t.float    "vitaminB2",    limit: 24
+    t.float    "vitaminB3",    limit: 24
+    t.float    "vitaminB6",    limit: 24
+    t.float    "vitaminB12",   limit: 24
+    t.float    "vitaminB9",    limit: 24
+    t.float    "cholic_acid",  limit: 24
+    t.float    "bionic_acid",  limit: 24
+    t.float    "vitaminB5",    limit: 24
+    t.float    "calcuim",      limit: 24
+    t.float    "phosphorus",   limit: 24
+    t.float    "magnesium",    limit: 24
+    t.float    "iron",         limit: 24
+    t.float    "zinc",         limit: 24
+    t.float    "iodine",       limit: 24
+    t.float    "selenium",     limit: 24
+    t.float    "fluorine",     limit: 24
   end
 
   create_table "user2s", force: :cascade do |t|
@@ -32,8 +66,8 @@ ActiveRecord::Schema.define(version: 20150506115915) do
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.string   "name",                   limit: 255
-    t.string   "hostpital_name",         limit: 255
-    t.string   "hostpital_address",      limit: 255
+    t.string   "hospital_name",          limit: 255
+    t.string   "hospital_address",       limit: 255
   end
 
   add_index "user2s", ["email"], name: "index_user2s_on_email", unique: true, using: :btree
@@ -72,6 +106,34 @@ ActiveRecord::Schema.define(version: 20150506115915) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "name",                   limit: 255
+    t.string   "roc_id",                 limit: 255
+    t.integer  "doc_id",                 limit: 4
+    t.integer  "resturant_id",           limit: 4
+    t.float    "calory",                 limit: 24
+    t.float    "protein",                limit: 24
+    t.float    "vitaminA6",              limit: 24
+    t.float    "vitaminD7",              limit: 24
+    t.float    "vitaminE8",              limit: 24
+    t.float    "vitaminK",               limit: 24
+    t.float    "vitaminC",               limit: 24
+    t.float    "vitaminB1",              limit: 24
+    t.float    "vitaminB2",              limit: 24
+    t.float    "vitaminB3",              limit: 24
+    t.float    "vitaminB6",              limit: 24
+    t.float    "vitaminB12",             limit: 24
+    t.float    "vitaminB9",              limit: 24
+    t.float    "cholic_acid",            limit: 24
+    t.float    "bionic_acid",            limit: 24
+    t.float    "vitaminB5",              limit: 24
+    t.float    "calcuim",                limit: 24
+    t.float    "phosphorus",             limit: 24
+    t.float    "magnesium",              limit: 24
+    t.float    "iron",                   limit: 24
+    t.float    "zinc",                   limit: 24
+    t.float    "iodine",                 limit: 24
+    t.float    "selenium",               limit: 24
+    t.float    "fluorine",               limit: 24
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

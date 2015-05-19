@@ -1,0 +1,9 @@
+<%= form_for @patient , :url => doctors_patient_path(@patient) , :method => :patch  do |p|%>
+  <div class="row">
+      <%= p.label :user_name, "追蹤者姓名"%>
+      <%= p.text_field :user_name , disabled: true %>
+      <%= p.label :advise, "營養師建議" %>
+      <%= p.text_field :advise , class:"materialize-textarea" %>
+  </div>
+<%= p.submit "更新" ,class:"btn" %>
+<% end %>

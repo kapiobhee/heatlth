@@ -1,0 +1,22 @@
+<%= link_to '', new_doctors_patient_path, :class => "btn-floating btn-large red left mdi-social-person-add" %>
+
+<table id="patients_table" class="responsive-table striped">
+  <thead>
+    <tr>
+      <td>名字</td>
+      <td>細節</td>
+      <td>追蹤</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @patients.each do |p|%>
+    <tr>
+      <td><%= p.user_name %></td>
+      <td><%= link_to("詳細資料",doctors_patient_path(p))%></td>
+      <td><%= link_to("取消追蹤",doctors_patient_path(p), method: :delete, data: { confirm: "確定取消追蹤?"} )%></td>
+    </tr>
+
+  <% end %>
+  </tbody>
+</table>
+

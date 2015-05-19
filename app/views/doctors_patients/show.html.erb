@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <td>追蹤者姓名</td>
+      <td>營養師建議</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @patient.user_name %></td>
+      <td><%= @patient.advise %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%=link_to '', edit_doctors_patient_path(@patient), :class => "btn mdi-editor-border-color large"%>

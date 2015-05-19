@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :user3s, :controllers => {
+ devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'
+  }
+
+ devise_for :user2s, :controllers => {
+    :registrations => 'user2s/registrations',
+    :sessions => 'user2s/sessions'
+  }
+
+ devise_for :user3s, :controllers => {
     :registrations => 'user3s/registrations',
     :sessions => 'user3s/sessions'
   }
-  devise_for :user2s
-  devise_for :users
 
   root 'welcome#index'
-  resources :members,:nutritionists,:resturants,:meals
+  resources :members,:nutritionists,:resturants,:meals,:doctors_patients
 
 
 

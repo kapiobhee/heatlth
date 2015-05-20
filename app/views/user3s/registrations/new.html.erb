@@ -21,6 +21,16 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :餐廳名稱 %><br />
+    <%= f.text_field :resturant_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :餐廳地址 %><br />
+    <%= f.text_field :resturant_address %>
+  </div>
+
   <div class="actions">
     <%= f.submit "註冊",:class => 'btn waves-effect waves-light' %>
   </div>

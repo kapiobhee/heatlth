@@ -1,0 +1,85 @@
+<div class="row">
+  <table class="bordered">
+    <tr >
+      <td class="col s2 m2">
+        料理名稱：
+      </td>
+      <td class="col s2 m2">
+        <%= @meal.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        卡路里：
+      </td>
+      <td>
+        <%= @meal.calory %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        蛋白質：
+      </td>
+      <td>
+        <%= @meal.protein %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        維生素A6：
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        維生素D7：
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+
+  <%= @meal.vitaminA6 %>
+  <%= @meal.vitaminD7 %>
+  <%= @meal.vitaminE8 %>
+  <%= @meal.vitaminK %>
+  <%= @meal.vitaminC %>
+  <%= @meal.vitaminB1 %>
+  <%= @meal.vitaminB2 %>
+  <%= @meal.vitaminB3 %>
+  <%= @meal.vitaminB6 %>
+  <%= @meal.vitaminB12 %>
+  <%= @meal.vitaminB9 %>
+  <%= @meal.cholic_acid %>
+  <%= @meal.bionic_acid %>
+  <%= @meal.vitaminB5 %>
+  <%= @meal.calcuim %>
+  <%= @meal.phosphorus %>
+  <%= @meal.magnesium %>
+  <%= @meal.iron %>
+  <%= @meal.zinc %>
+  <%= @meal.iodine %>
+  <%= @meal.selenium %>
+  <%= @meal.fluorine %>
+  </table>
+</div>
+
+卡路里 蛋白質 維生素A6 維生素D7 維生素E8 維生素K 維生素C 維生素B1 維生素B2 菸鹼素 維生素B6 維生素B12 葉酸 膽素 生物素 泛酸 鈣 磷 鎂 鐵 鋅 碘 硒 氟

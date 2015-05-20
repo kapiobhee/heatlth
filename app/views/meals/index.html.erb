@@ -1,6 +1,6 @@
 <%= link_to '', new_meal_path, :class => "btn-floating btn-large red left mdi-social-person-add" %>
 
-<table id="meals_table" class="responsive-table striped">
+<table id="meals_table" class="bordered striped">
   <thead>
     <tr>
       <td>料理名稱</td>
@@ -13,7 +13,7 @@
     <tr>
       <td><%= m.name %></td>
       <td><%= link_to("顯示",meal_path(m))%></td>
-      <td><%= link_to("刪除",meal_path(m), method: :delete, data: { confirm: "確定取消追蹤?"} )%></td>
+      <td><%= link_to("刪除",meal_path(m), method: :delete, data: { confirm: "確定刪除料理?"} )%></td>
     </tr>
 
   <% end %>

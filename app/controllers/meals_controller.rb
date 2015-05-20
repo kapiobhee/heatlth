@@ -17,12 +17,31 @@ class MealsController < ApplicationController
     @meal.resturant_id = current_user3.id
     @meal.save
 
-    redirect_to :action => 'index'
+    redirect_to :action => "index"
   end
 
   def show
     @meal = Meal.find(params[:id])
   end
+
+  def edit
+    @meal = Meal.find(params[:id])
+  end
+
+  def update
+    @meal = Meal.find(params[:id])
+    @meal.update(meal_params)
+
+    redirect_to :action => "show"
+  end
+
+  def destroy
+    @meal = Meal.find(params[:id])
+    @meal.destroy
+
+    redirect_to :action => "index"
+  end
+
 
   private
   def meal_params

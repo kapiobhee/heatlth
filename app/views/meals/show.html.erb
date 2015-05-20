@@ -1,0 +1,208 @@
+<div class="row">
+  <table class="bordered">
+    <tr>
+      <td class="col m2 s6">
+        料理名稱：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.name %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        卡路里（大卡）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.calory %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        蛋白質（公克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.protein %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素A6（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminA6 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素D7（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminD7 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素E8（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminE8 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素K（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminK %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素C（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminC %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素B1（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB1 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素B2（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB2 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        菸鹼素（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB3 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素B6（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB6 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        維生素B12（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB12 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        葉酸（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB9 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        膽素（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.cholic_acid %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        生物素（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.bionic_acid %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        泛酸（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.vitaminB5 %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        鈣（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.calcuim %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        磷（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.phosphorus %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        鎂（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.magnesium %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        鐵（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.iron %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        鋅（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.zinc %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        碘（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.iodine %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        硒（微克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.selenium %>
+      </td>
+    </tr>
+    <tr>
+      <td class="col m2 s6">
+        氟（毫克）：
+      </td>
+      <td class="col m2 s6">
+        <%= @meal.fluorine %>
+      </td>
+    </tr>
+
+  </table>
+
+  <%=link_to '', edit_meal_path(@meal), :class => "btn mdi-editor-border-color large"%>
+</div>
+

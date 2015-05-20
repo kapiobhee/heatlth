@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516124654) do
+ActiveRecord::Schema.define(version: 20150519174014) do
 
   create_table "doctor_patients", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20150516124654) do
   end
 
   create_table "meals", force: :cascade do |t|
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "resturant_id", limit: 4
     t.float    "calory",       limit: 24
     t.float    "protein",      limit: 24
@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(version: 20150516124654) do
     t.float    "iodine",       limit: 24
     t.float    "selenium",     limit: 24
     t.float    "fluorine",     limit: 24
+    t.string   "name",         limit: 255
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user2s", force: :cascade do |t|

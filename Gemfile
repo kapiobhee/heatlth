@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem "materialize-sass"
-
+gem "therubyracer"
+gem "rails_autocomplete"
 
 gem "mysql2"
 gem "devise", "~> 3.4.1", github: "plataformatec/devise", branch: "master"

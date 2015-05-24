@@ -15,10 +15,17 @@ Rails.application.routes.draw do
   }
 
   root 'welcome#index'
-  resources :members,:nutritionists,:resturants,:meals,:doctors_patients,:orders
+  resources :members,:nutritionists,:resturants,:meals
 
+  resources :doctors_patients do
+    collection do
+      get :show_userview
+    end
+  end
 
-
+  resources :orders do
+    get :autocomplete_user_name, :on => :collection
+  end
 
 
 

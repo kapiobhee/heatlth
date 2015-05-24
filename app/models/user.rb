@@ -4,12 +4,4 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def self.search(search)
-    if search
-      self.where("roc_id like ?", "#{search}")
-    elsif
-      self.all
-    end
-  end
-
 end

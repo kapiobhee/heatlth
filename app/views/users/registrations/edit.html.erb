@@ -27,9 +27,132 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :姓名  %>
+    <%= f.text_field :name%>
+  </div>
 
+  <div class="field">
+    <%= f.label :卡路里　單位：（大卡）%>
+    <%= f.number_field :calory %>
+  </div>
 
-  <div class="actions">
+   <div class="field">
+    <%= f.label :蛋白質　單位：（公克）%>
+    <%= f.number_field :protein %>
+  </div>
+
+   <div class="field">
+    <%= f.label :維生素A6　單位：（微克）%>
+    <%= f.number_field :vitaminA6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素D7　單位：（微克）%>
+    <%= f.number_field :vitaminD7 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素E8　單位：（毫克）%>
+    <%= f.number_field :vitaminE8 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素K　單位：（微克）%>
+    <%= f.number_field :vitaminK %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素C　單位：（毫克）%>
+    <%= f.number_field :vitaminC %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素B1　單位：（毫克）%>
+    <%= f.number_field :vitaminB1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素B2　單位：（毫克）%>
+    <%= f.number_field :vitaminB2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :菸鹼素　單位：（毫克）%>
+    <%= f.number_field :vitaminB3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素B6　單位：（毫克）%>
+    <%= f.number_field :vitaminB6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :維生素B12　單位：（微克）%>
+    <%= f.number_field :vitaminB12 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :葉酸　單位：（微克）%>
+    <%= f.number_field :vitaminB9 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :膽素　單位：（毫克）%>
+    <%= f.number_field :cholic_acid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :生物素　單位：（微克）%>
+    <%= f.number_field :bionic_acid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :泛酸　單位：（毫克）%>
+    <%= f.number_field :vitaminB5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :鈣　單位：（毫克）%>
+    <%= f.number_field :calcuim %>
+  </div>
+
+  <div class="field">
+    <%= f.label :磷　單位：（毫克）%>
+    <%= f.number_field :phosphorus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :鎂　單位：（毫克）%>
+    <%= f.number_field :magnesium %>
+  </div>
+
+  <div class="field">
+    <%= f.label :鐵　單位：（毫克）%>
+    <%= f.number_field :iron %>
+  </div>
+
+  <div class="field">
+    <%= f.label :鋅　單位：（毫克）%>
+    <%= f.number_field :zinc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :碘　單位：（微克）%>
+    <%= f.number_field :iodine %>
+  </div>
+
+  <div class="field">
+    <%= f.label :硒　單位：（微克）%>
+    <%= f.number_field :selenium %>
+  </div>
+
+  <div class="field">
+    <%= f.label :氟　單位：（毫克）%>
+    <%= f.number_field :fluorine %>
+  </div>
+
+<div class="actions">
     <%= f.submit "確認修改" ,:class => 'btn waves-effect waves-light'%>
   </div>
 

@@ -50,6 +50,11 @@ class DoctorsPatientsController < ApplicationController
     redirect_to :action => :index
   end
 
+  def show_userview
+    @advise = DoctorPatient.where("user_id = ?",current_user.id)
+    @doctor = User2.find(@advise.first.doctor_id)
+  end
+
   private
 
   def dp_params

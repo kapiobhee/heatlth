@@ -11,9 +11,41 @@
   </div>
 </nav>
 
+
+</br></br></br>
+
+
 <% if !@resturant_name.nil? %>
-  <% @resturant_name.each do |s| %>
-    <%= s.resturant_name %>
-  <%end%>
+<table class="striped">
+  <thead>
+    <tr>
+      <td>
+        餐廳名稱
+      </td>
+      <td>
+        餐廳地址
+      </td>
+      <td>
+        選擇餐廳
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resturant_name.each do |s| %>
+    <tr>
+      <td>
+        <%= s.resturant_name %>
+      </td>
+      <td>
+        <%= s.resturant_address %>
+      </td>
+      <td>
+        <%= link_to("選擇此餐廳", new_order_path)%>
+      </td>
+    </tr>
+  </tbody>
+ <% end %>
+</table>
 <% end %>
+
 

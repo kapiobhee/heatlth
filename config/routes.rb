@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   }
 
   root 'welcome#index'
-  resources :members,:nutritionists,:resturants,:meals
+  resources :members,:nutritionists,:resturants,:meals,:order_meals
 
   resources :doctors_patients do
     collection do

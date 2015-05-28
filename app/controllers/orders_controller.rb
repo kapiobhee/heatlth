@@ -11,6 +11,14 @@ class OrdersController < ApplicationController
   end
 
   def new
+    puts "#{params[:resturant_id]}"
+    @resturant_meals = Meal.where('resturant_id = ?',"#{params[:resturant_id]}")
+    @order_meals = OrderMeal.new
+  end
 
+
+  private
+  def order_meal_params
+    params.require(:order_meals).permit(:order_id, :meal_id, :quantity)
   end
 end

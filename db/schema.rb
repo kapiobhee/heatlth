@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527075633) do
+ActiveRecord::Schema.define(version: 20150528163920) do
 
   create_table "doctor_patients", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 20150527075633) do
     t.float    "selenium",     limit: 24
     t.float    "fluorine",     limit: 24
     t.string   "name",         limit: 255
+  end
+
+  create_table "order_meals", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "order_id",   limit: 4
+    t.integer  "meal_id",    limit: 4
+    t.integer  "quantity",   limit: 4
   end
 
   create_table "orders", force: :cascade do |t|

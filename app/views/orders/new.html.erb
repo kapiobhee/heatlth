@@ -1,0 +1,12 @@
+<%= form_for @order_meals do |om| %>
+  <div class="row">
+    <%= om.number_field :order_id %>
+    <%= om.number_field :meal_id %>
+    <%= om.number_field :quantity %>
+  </div>
+  <%= om.submit %>
+<% end %>
+
+
+
+

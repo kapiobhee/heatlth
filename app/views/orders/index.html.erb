@@ -40,7 +40,7 @@
         <%= s.resturant_address %>
       </td>
       <td>
-        <%= link_to("選擇此餐廳", new_order_path)%>
+        <%= link_to("選擇此餐廳", new_order_path(:resturant_id => s.id))%>
       </td>
     </tr>
   </tbody>

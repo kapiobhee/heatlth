@@ -1,0 +1,23 @@
+<div id="modal1" class="modal">
+  <div class="modal-content">
+  <%= form_for @order_meals do |om| %>
+    <div class="input-field" >
+    <%= om.number_field :order_id, :value => @order+1 %>
+    <%= label :order_id, "訂單ID"%>
+    </div>
+    <div class="input-field" >
+    <%= om.number_field :meal_id, :value => rm.id %>
+    <%= label :meal_id, "餐點ID"%>
+    </div>
+    <div class="input-field" >
+    <%= om.number_field :quantity %>
+    <%= label :quantity, "數量" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= om.submit %>
+  </div>
+  <% end %>
+</div>
+
+

@@ -24,7 +24,9 @@ Rails.application.routes.draw do
   end
 
   resources :orders do
-    get :autocomplete_user_name, :on => :collection
+    collection do
+      get :mealid
+    end
   end
 
 

@@ -6,6 +6,10 @@ class OrderMealsController < ApplicationController
     redirect_to :controller => "orders", :action => "new" , :resturant_id => "1"
   end
 
+  def partial
+
+  end
+
   private
   def order_meal_params
     params.require(:order_meal).permit(:order_id, :meal_id, :quantity)

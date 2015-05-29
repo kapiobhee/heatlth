@@ -1,8 +1,9 @@
 <% @resturant_meals.each do |rm|  %>
   <%= rm.name %>
   <%= rm.calory %>
-  <%= link_to "選擇此餐點", "#modal1", :class => "modal-trigger", 'data-target' => 'modal1' %>
+  <a id="<%= rm.id %>" class="modal-trigger modaldiv" href="#modal1">選擇此餐點</a>
   <%= render "form_partial" , :rm => rm %>
+  <div id="meal_id_<%= rm.id %>"></div>
 <% end %>
 
 

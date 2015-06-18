@@ -29,6 +29,22 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :fake do
+    collection do
+      get :test
+      get :test2
+      get :test3
+      get :test4
+      get :test5
+      get :test6
+      get :test7
+      get :test8
+      get :test9
+      get :test10
+
+
+    end
+  end
 
 
 

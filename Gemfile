@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sass-rails'
 gem "materialize-sass"
 gem "therubyracer"
 gem "rails_autocomplete"

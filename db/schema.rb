@@ -13,145 +13,148 @@
 
 ActiveRecord::Schema.define(version: 20150528163920) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "doctor_patients", force: :cascade do |t|
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "doctor_id",  limit: 4
-    t.integer  "user_id",    limit: 4
-    t.text     "advise",     limit: 65535
-    t.string   "user_name",  limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "doctor_id"
+    t.integer  "user_id"
+    t.text     "advise"
+    t.string   "user_name"
   end
 
   create_table "meals", force: :cascade do |t|
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "resturant_id", limit: 4
-    t.float    "calory",       limit: 24
-    t.float    "protein",      limit: 24
-    t.float    "vitaminA6",    limit: 24
-    t.float    "vitaminD7",    limit: 24
-    t.float    "vitaminE8",    limit: 24
-    t.float    "vitaminK",     limit: 24
-    t.float    "vitaminC",     limit: 24
-    t.float    "vitaminB1",    limit: 24
-    t.float    "vitaminB2",    limit: 24
-    t.float    "vitaminB3",    limit: 24
-    t.float    "vitaminB6",    limit: 24
-    t.float    "vitaminB12",   limit: 24
-    t.float    "vitaminB9",    limit: 24
-    t.float    "cholic_acid",  limit: 24
-    t.float    "bionic_acid",  limit: 24
-    t.float    "vitaminB5",    limit: 24
-    t.float    "calcuim",      limit: 24
-    t.float    "phosphorus",   limit: 24
-    t.float    "magnesium",    limit: 24
-    t.float    "iron",         limit: 24
-    t.float    "zinc",         limit: 24
-    t.float    "iodine",       limit: 24
-    t.float    "selenium",     limit: 24
-    t.float    "fluorine",     limit: 24
-    t.string   "name",         limit: 255
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "resturant_id"
+    t.float    "calory"
+    t.float    "protein"
+    t.float    "vitaminA6"
+    t.float    "vitaminD7"
+    t.float    "vitaminE8"
+    t.float    "vitaminK"
+    t.float    "vitaminC"
+    t.float    "vitaminB1"
+    t.float    "vitaminB2"
+    t.float    "vitaminB3"
+    t.float    "vitaminB6"
+    t.float    "vitaminB12"
+    t.float    "vitaminB9"
+    t.float    "cholic_acid"
+    t.float    "bionic_acid"
+    t.float    "vitaminB5"
+    t.float    "calcuim"
+    t.float    "phosphorus"
+    t.float    "magnesium"
+    t.float    "iron"
+    t.float    "zinc"
+    t.float    "iodine"
+    t.float    "selenium"
+    t.float    "fluorine"
+    t.string   "name"
   end
 
   create_table "order_meals", force: :cascade do |t|
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "order_id",   limit: 4
-    t.integer  "meal_id",    limit: 4
-    t.integer  "quantity",   limit: 4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "order_id"
+    t.integer  "meal_id"
+    t.integer  "quantity"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "user_id",      limit: 4
-    t.integer  "resturant_id", limit: 4
-    t.integer  "meal_id",      limit: 4
-    t.integer  "sum_of_money", limit: 4
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.integer  "resturant_id"
+    t.integer  "meal_id"
+    t.integer  "sum_of_money"
   end
 
   create_table "user2s", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "name",                   limit: 255
-    t.string   "hospital_name",          limit: 255
-    t.string   "hospital_address",       limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "hospital_name"
+    t.string   "hospital_address"
   end
 
   add_index "user2s", ["email"], name: "index_user2s_on_email", unique: true, using: :btree
   add_index "user2s", ["reset_password_token"], name: "index_user2s_on_reset_password_token", unique: true, using: :btree
 
   create_table "user3s", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "resturant_name",         limit: 255
-    t.string   "resturant_address",      limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "resturant_name"
+    t.string   "resturant_address"
   end
 
   add_index "user3s", ["email"], name: "index_user3s_on_email", unique: true, using: :btree
   add_index "user3s", ["reset_password_token"], name: "index_user3s_on_reset_password_token", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "name",                   limit: 255
-    t.string   "roc_id",                 limit: 255
-    t.integer  "doc_id",                 limit: 4
-    t.integer  "resturant_id",           limit: 4
-    t.float    "calory",                 limit: 24
-    t.float    "protein",                limit: 24
-    t.float    "vitaminA6",              limit: 24
-    t.float    "vitaminD7",              limit: 24
-    t.float    "vitaminE8",              limit: 24
-    t.float    "vitaminK",               limit: 24
-    t.float    "vitaminC",               limit: 24
-    t.float    "vitaminB1",              limit: 24
-    t.float    "vitaminB2",              limit: 24
-    t.float    "vitaminB3",              limit: 24
-    t.float    "vitaminB6",              limit: 24
-    t.float    "vitaminB12",             limit: 24
-    t.float    "vitaminB9",              limit: 24
-    t.float    "cholic_acid",            limit: 24
-    t.float    "bionic_acid",            limit: 24
-    t.float    "vitaminB5",              limit: 24
-    t.float    "calcuim",                limit: 24
-    t.float    "phosphorus",             limit: 24
-    t.float    "magnesium",              limit: 24
-    t.float    "iron",                   limit: 24
-    t.float    "zinc",                   limit: 24
-    t.float    "iodine",                 limit: 24
-    t.float    "selenium",               limit: 24
-    t.float    "fluorine",               limit: 24
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "roc_id"
+    t.integer  "doc_id"
+    t.integer  "resturant_id"
+    t.float    "calory"
+    t.float    "protein"
+    t.float    "vitaminA6"
+    t.float    "vitaminD7"
+    t.float    "vitaminE8"
+    t.float    "vitaminK"
+    t.float    "vitaminC"
+    t.float    "vitaminB1"
+    t.float    "vitaminB2"
+    t.float    "vitaminB3"
+    t.float    "vitaminB6"
+    t.float    "vitaminB12"
+    t.float    "vitaminB9"
+    t.float    "cholic_acid"
+    t.float    "bionic_acid"
+    t.float    "vitaminB5"
+    t.float    "calcuim"
+    t.float    "phosphorus"
+    t.float    "magnesium"
+    t.float    "iron"
+    t.float    "zinc"
+    t.float    "iodine"
+    t.float    "selenium"
+    t.float    "fluorine"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

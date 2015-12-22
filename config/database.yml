@@ -1,19 +1,20 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: 5
   timeout: 5000
 
 development:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   database: health
   host: localhost
-  username: root
-  password:
+  username: kapiobhee
+  password: container
+
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/test.postgresql
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode

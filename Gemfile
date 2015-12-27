@@ -4,6 +4,8 @@ gem "therubyracer"
 gem "rails_autocomplete"
 
 
+gem 'unicorn'
+
 gem "devise", "~> 3.4.1", github: "plataformatec/devise", branch: "master"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
